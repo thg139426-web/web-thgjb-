@@ -1,0 +1,4 @@
+# Repositorios Oficiales Rootless para THGJB
+deb https://repo.chariz.com/ iphoneos-arm64 main
+deb https://havoc.app/ iphoneos-arm64 main
+deb https://apt.procurs.us/ iphoneos-arm64 main

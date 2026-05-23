@@ -1,0 +1,12 @@
+[user]
+	name = thg139426-web
+	email = thg139426@gmail.com
+	email = thg139426@gmail.comgit
+[credential "https://github.com"]
+	helper = 
+	helper = !/data/data/com.termux/files/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/data/data/com.termux/files/usr/bin/gh auth git-credential
+[credential]
+	helper = store
