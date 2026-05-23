@@ -1,155 +1,62 @@
-cat << 'EOF' > index.html
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>THGJB - Sitio Oficial</title>
+    <title>THGJB Oficial</title>
     <style>
-        body {
-            background-color: #000000;
+        body { background-color: #050505; color: #fff; font-family: sans-serif; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; padding: 20px; }
+        .card { width: 100%; max-width: 360px; background: #0b0e14; border: 2px solid #0052ff; border-radius: 20px; padding: 25px; text-align: center; position: relative; margin-top: 60px; }
+        
+        /* Logo con estilo de rayo/bocadillo */
+        .logo-thgjb {
+            position: absolute;
+            top: -50px;
+            left: 50%;
+            transform: translateX(-50%) skewX(-15deg);
+            background-color: #d61e27;
             color: #ffffff;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-            padding: 10px;
-        }
-        .outer-border {
-            width: 100%;
-            max-width: 420px;
-            background-color: #0b0e14;
-            border: 3px solid #0052ff;
-            border-radius: 24px;
-            padding: 35px 20px;
-            box-shadow: 0 0 20px rgba(0, 82, 255, 0.4);
-            box-sizing: border-box;
-            text-align: center;
-        }
-        h1 {
-            color: #ff1a2e;
-            font-size: 3rem;
             font-weight: 900;
-            margin: 0 0 15px 0;
-            letter-spacing: 2px;
-            text-shadow: 0 0 15px rgba(255, 26, 46, 0.4);
+            font-size: 1.8rem;
+            padding: 10px 25px;
+            border: 3px solid #ffffff;
+            text-shadow: 2px 2px 0px rgba(0,0,0,0.5);
+            box-shadow: 0 4px 15px rgba(214, 30, 39, 0.6);
+            clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 40% 75%, 25% 100%, 25% 75%, 0% 75%);
+            z-index: 10;
         }
-        .soporte {
-            color: #6a737d;
-            font-size: 1.1rem;
-            margin: 25px 0;
-        }
-        .ecosistema-box {
-            background-color: #12161f;
-            border-left: 5px solid #ff1a2e;
-            border-radius: 12px;
-            padding: 20px;
-            text-align: left;
-            margin: 25px auto;
-            max-width: 320px;
-        }
-        .ecosistema-box h3 {
-            margin: 0 0 12px 0;
-            font-size: 1.3rem;
-            color: #ffffff;
-        }
-        .ecosistema-box ul {
-            margin: 0;
-            padding-left: 20px;
-            color: #a3aab2;
-            line-height: 1.8;
-            font-size: 1.05rem;
-        }
-        .btn-descargar {
-            display: inline-block;
-            background: linear-gradient(135deg, #ff1a2e, #b30012);
-            color: #ffffff;
-            font-size: 1.3rem;
-            font-weight: bold;
-            text-decoration: none;
-            padding: 15px 40px;
-            border-radius: 30px;
-            margin: 20px 0 35px 0;
-            box-shadow: 0 4px 15px rgba(255, 26, 46, 0.4);
-            letter-spacing: 1px;
-            transition: transform 0.1s;
-        }
-        .btn-descargar:active {
-            transform: scale(0.97);
-        }
-        .seccion-instaladores {
-            border-top: 1px solid #1f242c;
-            padding-top: 25px;
-        }
-        .seccion-instaladores h4 {
-            color: #0052ff;
-            font-size: 1.1rem;
-            margin: 0 0 15px 0;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        .grid-instaladores {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-            max-width: 340px;
-            margin: 0 auto;
-        }
-        .inst-card {
-            background-color: #12161f;
-            border-radius: 10px;
-            padding: 12px;
-            font-size: 0.95rem;
-            color: #d1d5da;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 6px;
-            border: 1px solid #1f242c;
-        }
-        .inst-card span {
-            font-size: 0.85rem;
-            color: #858a91;
-            display: block;
-        }
+
+        h1 { color: #ff1a2e; margin-top: 50px; font-size: 2rem; }
+        .btn { display: block; background: #ff1a2e; color: white; padding: 15px; margin: 15px 0; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 1rem; border: none; cursor: pointer; }
+        .btn-rootless { background: #0052ff; }
+        
+        .box { background: #1a1d24; padding: 15px; border-radius: 15px; text-align: left; margin: 15px 0; border-left: 4px solid #ff1a2e; font-size: 0.9rem; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 15px; }
+        .inst { background: #1a1d24; padding: 10px; border-radius: 8px; font-size: 0.8rem; color: #ccc; }
     </style>
 </head>
 <body>
 
-<div class="outer-border">
+<div class="card">
+    <div class="logo-thgjb">THGJB</div>
     <h1>THGJB</h1>
     
-    <div class="soporte">Soporte Oficial: iOS 15.0 - iOS 26.0</div>
-    
-    <div class="ecosistema-box">
-        <h3>Ecosistema Activo:</h3>
-        <ul>
-            <li>Soporte <strong>AppTapp Installer</strong></li>
-            <li>Cydia • Saily • Sileo • Zebra</li>
-        </ul>
+    <div class="box">
+        <strong>Ecosistema Activo:</strong><br>
+        • Soporte AppTapp Installer<br>
+        • Cydia • Saily • Sileo • Zebra
     </div>
-    
-    <a href="https://raw.githubusercontent.com/thg139426-web/THGJB-4/main/install.sh" class="btn-descargar">DESCARGAR .IPA</a>
-    
-    <div class="seccion-instaladores">
-        <h4>Instaladores Compatibles</h4>
-        <div class="grid-instaladores">
-            <div class="inst-card">⚡ TrollStore</div>
-            <div class="inst-card">🔥 ESign</div>
-            <div class="inst-card">💠 KSign</div>
-            <div class="inst-card">
-                <div>💻 AltStore /<br><span>Sideloadly</span></div>
-            </div>
-        </div>
+
+    <a href="descargas/THGJB.ipa" class="btn">DESCARGAR .IPA</a>
+    <a href="descargas/THGJB_rootless.ipa" class="btn btn-rootless">DESCARGAR ROOTLESS</a>
+
+    <h4 style="color:#0052ff; margin-top:20px;">INSTALADORES COMPATIBLES</h4>
+    <div class="grid">
+        <div class="inst">⚡ TrollStore</div><div class="inst">🔥 ESign</div>
+        <div class="inst">💠 KSign</div><div class="inst">💻 Sideloadly</div>
     </div>
 </div>
 
 </body>
 </html>
-EOF
-
-<a href="descargas/THGJB.ipa" class="btn-descargar">Descargar Normal</a>
-<a href="descargas/THGJB_rootless.ipa" class="btn-descargar">Descargar Rootless</a>
 

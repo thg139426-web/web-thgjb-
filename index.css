@@ -1,0 +1,25 @@
+/* Este es el código específico para el logo */
+.logo-thgjb {
+    /* Posicionamiento */
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%) skewX(-15deg);
+    
+    /* Colores y diseño */
+    background-color: #d61e27;
+    color: #ffffff;
+    font-weight: 900;
+    font-size: 1.8rem;
+    padding: 10px 25px;
+    border: 3px solid #ffffff;
+    
+    /* Sombra y profundidad */
+    text-shadow: 2px 2px 0px rgba(0,0,0,0.5);
+    box-shadow: 0 4px 15px rgba(214, 30, 39, 0.6);
+    
+    /* La magia del recorte (la forma de rayo) */
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 40% 75%, 25% 100%, 25% 75%, 0% 75%);
+    z-index: 10;
+}
+
