@@ -1,8 +1,0 @@
-Package: com.thg.thgjb
-Name: THGJB
-Version: 1.0.0
-Architecture: iphoneos-arm64
-Description: Herramienta independiente de modificación y gestión para iOS.
-Maintainer: THG El Loquendero
-Author: THG El Loquendero
-Section: Utilities
