@@ -6,8 +6,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-      - name: Setup Theos Path
-        run: echo "THEOS=/Users/runner/theos" >> $GITHUB_ENV
+      - name: Install Dependencies
+        run: brew install ldid
       - name: Install Theos Manually
         run: |
           git clone --recursive https://github.com/theos/theos /Users/runner/theos
@@ -18,7 +18,7 @@ jobs:
       - name: Build
         run: |
           export THEOS=/Users/runner/theos
-          export PATH=$PATH:$THEOS/bin
+          export PATH=$PATH:$THEOS/bin:/opt/homebrew/bin
           PROJECT_DIR=$(find . -name "Makefile" -exec dirname {} \; | head -n 1)
           cd "$PROJECT_DIR" && make
       - name: Upload Artifact
