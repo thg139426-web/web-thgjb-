@@ -7,9 +7,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
       - name: Install Theos
-        run: |
-          bash -c "$(curl -fsSL https://raw.githubusercontent.com/theos/theos/master/bin/install-theos)"
-          echo "THEOS=/Users/runner/theos" >> $GITHUB_ENV
+        # Añadimos --no-sdks para que no intente descargar los SDKs y no falle
+        run: bash -c "$(curl -fsSL https://raw.githubusercontent.com/theos/theos/master/bin/install-theos)" -- --no-sdks
       - name: Install SDKs
         run: |
           mkdir -p $THEOS/sdks
@@ -17,13 +16,8 @@ jobs:
       - name: Build
         run: |
           export PATH=$PATH:$THEOS/bin
-          # Busca el directorio que contiene el Makefile y compila ahí
+          # Buscamos el Makefile y compilamos
           PROJECT_DIR=$(find . -name "Makefile" -exec dirname {} \; | head -n 1)
-          if [ -z "$PROJECT_DIR" ]; then
-            echo "Error: No se encontró ningún Makefile en el repositorio."
-            exit 1
-          fi
-          echo "Compilando en: $PROJECT_DIR"
           cd "$PROJECT_DIR" && make
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
