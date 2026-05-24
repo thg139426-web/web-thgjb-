@@ -8,6 +8,13 @@ jobs:
         uses: actions/checkout@v4
       - name: Install Theos
         run: bash -c "$(curl -fsSL https://raw.githubusercontent.com/theos/theos/master/bin/install-theos)"
+      - name: Install SDKs
+        run: |
+          mkdir -p $THEOS/sdks
+          curl -LO https://github.com/theos/sdks/archive/master.zip
+          unzip master.zip
+          mv sdks-master/* $THEOS/sdks/
+          rm -rf sdks-master master.zip
       - name: Build
         run: |
           export THEOS=/Users/runner/theos
