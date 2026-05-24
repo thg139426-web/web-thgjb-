@@ -327,3 +327,167 @@ zip -r THGJB.ipa Payload > /dev/null
 if [ -f THGJB.ipa ]; then     echo -e "${RED}[✓] ¡ÉXITO TOTAL! Tu archivo original ha sido compilado.${RESET}";     echo -e "[*] Archivo generado: ${CYAN}THGJB.ipa${RESET}";     echo -e "[*] Tamaño del paquete: ${CYAN}$(ls -lh THGJB.ipa | awk '{print $5}'){RESET}";     echo -e "\n${BLUE_BG}${WHITE} LISTO PARA COMPARTIR EN TU WEB DE GITHUB PAGES {RESET}\n"; else     echo -e "${RED}[❌] Error al empaquetar el .ipa${RESET}"; fi
 # Limpieza de las carpetas temporales para no dejar basura
 rm -rf Payload
+nano index.html
+git add index.html
+git commit -m "Remasterización completa: diseño profesional aplicado"
+git push -u origin main
+git remote remove origin
+git remote add origin https://github.com/thg139426-web/thgjb-web.git
+git push -u origin main
+git pull origin main --allow-unrelated-histories
+git push -u origin main
+git push -u origin main --force
+git pull origin main --allow-unrelated-histories
+git add .
+git commit -m "Subiendo mi proyecto incluyendo el thgjb.ipa
+git push -u origin main
+git pull origin main --allow-unrelated-histories
+git add .
+git commit -m "Subiendo mi proyecto incluyendo el archivo .ipa"
+git push -u origin main
+mv índice.html index.html
+mv index.html
+# Creamos una carpeta para tus scripts y archivos extra
+mkdir backup
+mv *.sh.save backup/
+mv THGJB.ipa backup/
+mv THGJB_beta_2.0.0.ipa backup/
+git add .
+git commit -m "Organización de archivos y corrección de nombre index.html"
+git push -u origin main
+# Crea una carpeta llamada "descargas"
+mkdir descargas
+# Mueve tus archivos .ipa a esa carpeta
+mv THGJB.ipa descargas/
+mv THGJB_beta_2.0.0.ipa descargas/
+ls
+find. -thgjb "*.ipa"
+find . -name "*THGJB*.ipa"
+# Aseguramos que la carpeta exista
+mkdir -p descargas
+# Movemos el que está en THGJB-3
+mv THGJB-3/*.ipa descargas/
+# Movemos los dos que están en backup
+mv backup/*.ipa descargas/
+ls -l descargas/
+nano index.html
+git add .
+git commit -m "Organización final: movidos todos los IPA a la carpeta descargas"
+git push -u origin main
+git push
+python -m http.server 8080
+# 1. Crear carpetas maestras si no existen
+mkdir -p descargas docs scripts
+# 2. Mover archivos a sus lugares lógicos
+mv *.ipa descargas/           # Todos los instaladores a la carpeta de descargas
+mv *.sh scripts/              # Todos tus scripts (instalar, actualizar, menús) a scripts
+mv *.txt docs/                # Documentación o notas a docs
+mv *.deb descargas/           # Si tienes archivos .deb, también van a descargas
+# Borra el contenido actual
+cat /dev/null > index.html
+# Abre el archivo para pegar el código limpio
+nano index.html
+python -m http.server 8080
+# Borra el contenido actual
+cat /dev/null > index.html
+# Abre el archivo para pegar el código limpio
+nano index.html
+python -m http.server 8080
+# Borra el contenido actual
+cat /dev/null > index.html
+# Abre el archivo para pegar el código limpio
+nano index.html
+nano index.css
+python python3 -m http.server 8080
+nano test_web.sh
+python -m http.server 8080
+rm index.css
+nano index.html
+nano index.css
+python -m http.server 8080
+nano index.html
+rm index.html
+nano index.html
+python -m http.server 8080
+rm index.html
+nano index.html
+python -m http.server 8080
+nano index.html
+rm index.html
+nano index.html
+python -m http.server 8080
+rm index.html 
+nano index.html
+python -m http.server 8080
+rm index.html
+nano index.html
+nano index.css
+nano index.html
+rm index.html
+rm index.cas
+rm index.css
+index.css
+nano index.css
+nano index.html
+python -m http.server 8080
+mkdir ~/web_thgjb
+# Entra a tu carpeta
+cd ~/ruta/a/tu/proyecto
+# Inicia Git
+git init
+# Crea el archivo para ignorar archivos basura de tu sistema
+echo ".DS_Store" > .gitignore
+git add .
+git commit -m "Mi versión final y permanente de THGJB"
+git branch -M main
+git remote add origin https://github.com/thg139426-web/THGJB-web.git
+git push -u origin main
+rm .git-credentials
+echo ".git-credentials" >> .gitignore
+# Elimina el archivo del área de preparación (staging)
+git rm --cached .git-credentials
+# Reescribe el commit anterior para que no incluya el archivo
+git commit --amend -m "Mi versión final y permanente de THGJB"
+git push -u origin main
+# Elimina la entrada del archivo de configuración de Git
+git config --remove-section submodule.THGJB-3
+# Elimina el archivo .gitmodules si existe (solo si no tienes otros submódulos reales)
+rm -f .gitmodules
+# Si hay una carpeta llamada THGJB-3, quítala del repositorio
+git rm --cached THGJB-3
+git add .
+git commit -m "Limpiando submódulo fantasma THGJB-3"
+git push -u origin main
+ls -F
+touch .nojekyll
+nano index.html
+python -m http.server 8080
+git add index.html
+git commit -m "Actualizando diseño de interfaz en index.html"
+git push origin main
+ls -F
+touch .nojekyll
+# Elimina los archivos de respaldo que están ensuciando el repositorio
+rm -f *.save*
+# Si no necesitas las carpetas de otros proyectos (THGJB-3, etc) en este repositorio, bórralas:
+rm -rf THGJB-3/ THGJB_rootless/ backup/ build_thgjb/
+git add .
+git commit -m "Organizando archivos en carpeta docs para evitar errores de despliegue"
+git push origin main
+cd descargas
+ls -lh
+mkdir -p docs
+mv index.html index.css descargas docs/
+touch docs/.nojekyll
+cd ..
+mkdir -p docs
+# Movemos los archivos a docs
+mv index.html index.css descargas docs/
+# Creamos el archivo .nojekyll dentro de docs
+touch docs/.nojekyll
+git add .
+git commit -m "Organizando estructura en carpeta docs"
+git push -u origin main
+git add .
+git commit -m "Organizando estructura en docs para despliegue final"
+git push -u origin main
