@@ -6,17 +6,19 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-      - name: Install Theos
-        # Añadimos --no-sdks para que no intente descargar los SDKs y no falle
-        run: bash -c "$(curl -fsSL https://raw.githubusercontent.com/theos/theos/master/bin/install-theos)" -- --no-sdks
+      - name: Setup Theos Path
+        run: echo "THEOS=/Users/runner/theos" >> $GITHUB_ENV
+      - name: Install Theos Manually
+        run: |
+          git clone --recursive https://github.com/theos/theos /Users/runner/theos
       - name: Install SDKs
         run: |
-          mkdir -p $THEOS/sdks
-          curl -L https://github.com/theos/sdks/archive/master.tar.gz | tar -xz -C $THEOS/sdks --strip-components=1
+          mkdir -p /Users/runner/theos/sdks
+          curl -L https://github.com/theos/sdks/archive/master.tar.gz | tar -xz -C /Users/runner/theos/sdks --strip-components=1
       - name: Build
         run: |
+          export THEOS=/Users/runner/theos
           export PATH=$PATH:$THEOS/bin
-          # Buscamos el Makefile y compilamos
           PROJECT_DIR=$(find . -name "Makefile" -exec dirname {} \; | head -n 1)
           cd "$PROJECT_DIR" && make
       - name: Upload Artifact
