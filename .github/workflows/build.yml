@@ -20,7 +20,8 @@ jobs:
           export THEOS=/Users/runner/theos
           export PATH=$PATH:$THEOS/bin:/opt/homebrew/bin
           PROJECT_DIR=$(find . -name "Makefile" -exec dirname {} \; | head -n 1)
-          cd "$PROJECT_DIR" && make
+          # Usamos make package para que genere el .deb
+          cd "$PROJECT_DIR" && make package
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
