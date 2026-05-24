@@ -1,0 +1,10 @@
+/ (Raíz del repo)
+├── .github/
+│   └── workflows/
+│       └── build.yml
+├── Makefile
+├── control
+└── THGJBTool/ (aquí está tu código .m)
+    ├── main.m
+    └── Makefile
+    
