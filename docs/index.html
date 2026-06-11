@@ -3,63 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>THGJB Oficial</title>
-    <style>
-        body { background-color: #050505; color: #fff; font-family: sans-serif; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; padding: 20px; }
-        .card { width: 100%; max-width: 360px; background: #0b0e14; border: 2px solid #0052ff; border-radius: 20px; padding: 25px; text-align: center; position: relative; margin-top: 60px; }
-        
-        /* Logo con estilo de rayo/bocadillo */
-        .logo-thgjb {
-            position: absolute;
-            top: -50px;
-            left: 50%;
-            transform: translateX(-50%) skewX(-15deg);
-            background-color: #d61e27;
-            color: #ffffff;
-            font-weight: 900;
-            font-size: 1.8rem;
-            padding: 10px 25px;
-            border: 3px solid #ffffff;
-            text-shadow: 2px 2px 0px rgba(0,0,0,0.5);
-            box-shadow: 0 4px 15px rgba(214, 30, 39, 0.6);
-            clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 40% 75%, 25% 100%, 25% 75%, 0% 75%);
-            z-index: 10;
-        }
-
-        h1 { color: #ff1a2e; margin-top: 50px; font-size: 2rem; }
-        .btn { display: block; background: #ff1a2e; color: white; padding: 15px; margin: 15px 0; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 1rem; border: none; cursor: pointer; }
-        .btn-rootless { background: #0052ff; }
-        
-        .box { background: #1a1d24; padding: 15px; border-radius: 15px; text-align: left; margin: 15px 0; border-left: 4px solid #ff1a2e; font-size: 0.9rem; }
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 15px; }
-        .inst { background: #1a1d24; padding: 10px; border-radius: 8px; font-size: 0.8rem; color: #ccc; }
-    </style>
+    <title>THGJB</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="container">
+        <h1>THGJB</h1>
+        <p>Soporte Oficial: iOS 15.0 - iOS 27.0</p>
 
-<div class="card">
-    <div class="logo-thgjb">THGJB</div>
-    <h1>THGJB</h1>
-    
-    <div class="box">
-        <strong>Ecosistema Activo:</strong><br>
-        • Soporte AppTapp Installer<br>
-        • Cydia • Saily • Sileo • Zebra
+        <div class="ecosystem-box">
+            <h3>Ecosistema Activo:</h3>
+            <p>• Soporte <b>AppTapp Installer</b></p>
+            <p>• Cydia • Saily • Sileo • Zebra</p>
+        </div>
+
+        <a href="downloads/THGJB.ipa" class="main-button">DESCARGAR .IPA</a>
+
+        <h3 style="color: #007bff; margin-top: 20px;">INSTALADORES COMPATIBLES</h3>
+        <div class="app-grid">
+            <a href="#" class="app-card">⚡ TrollStore</a>
+            <a href="#" class="app-card">🔥 ESign</a>
+            <a href="#" class="app-card">💎 KSign</a>
+            <a href="#" class="app-card">💻 AltStore</a>
+        </div>
     </div>
-
-    <a href="descargas/THGJB.ipa" class="btn">DESCARGAR .IPA</a>
-    <a href="descargas/THGJB_rootless.ipa" class="btn btn-rootless">DESCARGAR ROOTLESS</a>
-
-    <h4 style="color:#0052ff; margin-top:20px;">INSTALADORES COMPATIBLES</h4>
-    <div class="grid">
-        <div class="inst">⚡ TrollStore</div><div class="inst">🔥 ESign</div>
-        <div class="inst">💠 KSign</div><div class="inst">💻 Sideloadly</div>
-    </div>
-</div>
-
 </body>
-</html/>
-<footer style="text-align: center; color: #555; margin-top: 40px; font-size: 0.7rem;">
-    <p>THGJB © 2026 | Desarrollado con integridad. Sin encuestas, sin verificaciones falsas, sin publicidad.</p>
-</footer>
+</html>
 

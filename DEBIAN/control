@@ -1,0 +1,7 @@
+Package: com.thgjb.shadowmilk
+Name: ShadowM1lk Patcher
+Version: 1.0.0
+Section: Utilities
+Architecture: iphoneos-arm64
+Description: Patcher exclusivo para el ecosistema THGJB.
+Author: THGJB

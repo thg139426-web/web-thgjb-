@@ -1,0 +1,9 @@
+Package: com.thgjb.tool
+Name: THGJB_Tool
+Version: 0.0.1
+Architecture: iphoneos-arm
+Description: An awesome tool of some sort!!
+Maintainer: THG
+Author: THG
+Section: System
+Tag: role::hacker

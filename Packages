@@ -1,0 +1,39 @@
+Package: com.thgjb.optimizador
+Version: 1.0.0
+Architecture: iphoneos-arm
+Maintainer: THG JB
+Filename: ./optimizador_thg.deb
+Size: 1048
+MD5sum: d6f6dc98e98aa847c781065efc6b834c
+SHA1: d89d2179735bf6a1b1856558ca44b7e65d1c2467
+SHA256: 46cd61400a5a6cd2b6801ea676948f34d56750ee3f8b3dc44a6ed241834a4807
+Section: Tweaks
+Description: Herramienta oficial de optimización para el ecosistema THG JB. Limpia caché y verifica permisos.
+Name: THG JB Optimizador
+
+Package: com.thgjb.shadowpatcher
+Version: 1.0.0
+Architecture: iphoneos-arm
+Maintainer: THG JB
+Filename: ./shadow_build.deb
+Size: 828
+MD5sum: 24b1df451ac261b3a725781698ed8549
+SHA1: 20f90af35fc1f9a1b517c3362d1082a42e69f31e
+SHA256: d8498c86a82294c80065bc4963e5fd5fb50e2a670890f1552948adbf85df48b0
+Section: Utilities
+Description: Patcher independiente para iOS.
+Name: ShadowM1lk Patcher
+
+Package: com.thgjb.tool
+Version: 1.0.0
+Architecture: iphoneos-arm
+Maintainer: THG JB
+Filename: ./thgjb-tool.deb
+Size: 429748
+MD5sum: 438ac9def611bcd1963766b3593f29d8
+SHA1: 39ab671ba783ac510497e785c03a5c29b1c7099d
+SHA256: e47558ef0269ba0843d5b0824f9b4df9365a24a591ce272923267ce272c89d59
+Section: Utilities
+Description: Herramienta maestra del ecosistema THG JB.
+Name: THG JB Tool
+

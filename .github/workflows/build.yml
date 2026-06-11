@@ -1,0 +1,31 @@
+name: Build THGJB
+on: [push]
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Install Dependencies
+        run: brew install ldid
+      - name: Install Theos Manually
+        run: |
+          git clone --recursive https://github.com/theos/theos /Users/runner/theos
+      - name: Install SDKs
+        run: |
+          mkdir -p /Users/runner/theos/sdks
+          curl -L https://github.com/theos/sdks/archive/master.tar.gz | tar -xz -C /Users/runner/theos/sdks --strip-components=1
+      - name: Build
+        run: |
+          export THEOS=/Users/runner/theos
+          export PATH=$PATH:$THEOS/bin:/opt/homebrew/bin
+          PROJECT_DIR=$(find . -name "Makefile" -exec dirname {} \; | head -n 1)
+          # Usamos make package para que genere el .deb
+          cd "$PROJECT_DIR" && make package
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: package
+          path: ./**/packages/*.deb
+          if-no-files-found: error
+
